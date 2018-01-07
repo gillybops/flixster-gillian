@@ -1,1 +1,14 @@
 @import "bootstrap";
+
+.navbar {
+  background: image_url('dark_leather.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
+  margin-bottom: 0;
+}
+~
+.navbar-inverse .navbar-brand {
+  color: #3DA506;
+  font-family: 'great_vibesregular', sans-serif;
+  font-size: 300%;
+  margin-bottom: 0;
+}
