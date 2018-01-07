@@ -1,4 +1,6 @@
 Rails.application.configure do
+  config.action_mailer.default_url_options = { host: 'git.heroku.com/flixster-gillian.git'}
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
