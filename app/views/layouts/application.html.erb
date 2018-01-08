@@ -3,10 +3,10 @@
   <head>
     <title>Flixster</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
 
@@ -15,7 +15,8 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Flixster</a>
+ <!--     <a class="navbar-brand" href="#">Flixster</a>  -->
+      <%= link_to 'Flixter', root_path, class: 'navbar-brand' %>
        
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
@@ -52,9 +53,9 @@
 
   <div id="footer">
     <div class="container">
-      <b>Footer Here</b>
+      <b>Teachers</b>
       <br />
-      <%= link_to 'Link', '#' %>
+      <%= link_to 'Teach a Course', new_instructor_course_path %>
     </div>
   </div>
   </body>
