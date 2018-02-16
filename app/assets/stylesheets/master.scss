@@ -72,9 +72,15 @@ h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
 ~
+.navbar {
+  background: image_url('dark_leather.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
+  margin-bottom: 0;
+}
+
 .navbar-inverse .navbar-brand {
   color: #3DA506;
   font-family: 'great_vibesregular', sans-serif;
-  font-size: 300%;
+  font-size: 200%;
   margin-bottom: 0;
 }
