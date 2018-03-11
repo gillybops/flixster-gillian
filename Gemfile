@@ -76,3 +76,4 @@ gem 'devise'
 # gem 'fog-aws', for carrierwave to communicate with Amazon S3
 gem 'carrierwave', '~> 1.0'
 gem 'fog-aws'
+gem 'figaro'
