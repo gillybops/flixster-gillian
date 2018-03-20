@@ -1,3 +1,4 @@
 AWS_ACCESS_KEY: "AKIAIST6SRLUAJYGHTZQ"
 AWS_SECRET_KEY: "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"
 AWS_BUCKET: "flixster-gillian"
+AWS_REGION:     "us-east-1"
