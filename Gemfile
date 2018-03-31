@@ -78,4 +78,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'fog-aws'
 gem 'figaro'
 gem 'mini_magick'
+
+# gem 'stripe', service to charge a user's credit card
+gem 'stripe'
 gem 'carrierwave-aws'
