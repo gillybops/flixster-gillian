@@ -72,6 +72,7 @@ end
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'devise'
+
 # gem 'carrierwave', '~> 1.0 for uploading images
 # gem 'fog-aws', for carrierwave to communicate with Amazon S3
 gem 'carrierwave', '~> 1.0'
@@ -82,3 +83,6 @@ gem 'mini_magick'
 # gem 'stripe', service to charge a user's credit card
 gem 'stripe'
 gem 'carrierwave-aws'
+
+# gem 'ranked-model' order items in a database
+gem 'ranked-model'
