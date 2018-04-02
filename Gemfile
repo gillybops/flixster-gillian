@@ -59,7 +59,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # To use Twitter Bootstrap 4; relies upon jQuery
+# To make UI items draggable; relies upon jQuery UI
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 gem 'popper_js', '~> 1.11.1'
 gem 'bootstrap', '4.0.0.alpha6'
