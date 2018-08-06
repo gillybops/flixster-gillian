@@ -2,12 +2,15 @@
 
 <div class="booyah-box col-10 offset-1">
   <div class="text-center">
-    <h1><%= @course.title %></h1>
-    <%= image_tag @course.image, class: 'img-fluid' %>
-  </div>
-  <br />   
+    <h1><%= @course.title %>
+      <br /><br />
+      <% if @course.image.present? %>
+        <%= image_tag @course.image, class: 'img-fluid', alt:"Responsive image" %>
+      <% end %>
+    </h1>
+  <br />
   <div class="row">
-    <div class="col-sm-4 col-12">
+    <div class="col-sm-4 col-12 text-center">
       <span class="badge badge-default">
         <%= number_to_currency @course.cost %>
       </span>
@@ -20,7 +23,6 @@
 
       <br />
       <br />
-      
        
       <% if current_user %>
         <% if current_user.enrolled_in?(@course) %>
@@ -42,20 +44,20 @@
       <% else %> 
         <h3 class="badge badge-info">Sign In to Enroll!</h3>
       <% end %>
-    </div>
-     
+    </div>     
 <!--  <div class="col-sm-6 col-6 offset-3 text-center"> -->
     <div class="col-sm-8 col-12">
       <%= @course.description %>
     </div>
-  </div>
-   
+  </div>   
 <!--<div class="col-8 offset-2"> -->
   <div class="col-12">
-    <% @course.sections.each do |section| %>
+    <% @course.sections.rank(:row_order).each do |section| %>
     <br /><br />
       <div class="section">
-        <h3><%= section.title %></h3>
+        <h3>
+          <%= section.title %>
+        </h3>
         <div class="row">
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <div class="col 12 col-sm-6">

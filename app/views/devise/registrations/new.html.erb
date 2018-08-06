@@ -1,3 +1,4 @@
+<br /><br />
 <div class="booyah-box col-10 offset-1">
   <h2>Sign up</h2>
   
@@ -9,11 +10,12 @@
       <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
       <%= f.input :password_confirmation, required: true %>
     </div>
-    
+    <br /> 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "Sign up", class: 'btn btn-primary btn-lg btn-block' %>
     </div>
   <% end %>
-
+  <br />
   <%= render "devise/shared/links" %>
+
 </div>
