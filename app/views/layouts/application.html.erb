@@ -15,11 +15,10 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
- <!--     <a class="navbar-brand" href="#">Flixster</a>  -->
         <%= link_to 'Savings App', root_path, class: 'navbar-brand' %>
        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item">
               <%= link_to 'See All Courses', courses_path, class: 'nav-link' %>
             </li>
@@ -69,11 +68,11 @@
           <div class="col-12 col-sm-3">
             <b>About</b>
             <br />
-            <%= link_to 'Team', 'team_path' %>
+            <%= link_to 'Team', 'team' %>
             <br />
-            <%= link_to 'Careers', 'career_path' %>
+            <%= link_to 'Careers', 'careers' %>
             <br />
-            <%= link_to 'Privacy Policy', 'privacy_path' %>
+            <%= link_to 'Privacy Policy', 'privacy' %>
           </div>
           <div class="col-12 col-sm-3">
             <b>Contact</b>
@@ -88,17 +87,19 @@
             <b>Social</b>
             <br />
             <br />
+<!--
             <%= link_to 'https://github.com/gillybops' do %>
               <span class="fa fa-github-square fa-2x social-button"></span>
             <% end %>
-            <%= link_to 'https://www.facebook.com/gillian.newton.3591' do %>
-              <span class="fa fa-facebook-square fa-2x social-button"></span>
-            <% end %>
+-->
             <%= link_to 'https://twitter.com/Gillian_LiWIT' do %>
               <span class="fa fa-twitter-square fa-2x social-button"></span>
             <% end %>
             <%= link_to 'https://www.linkedin.com/in/gillian-newton/' do %>
-              <span class="fa fa-twitter-square fa-2x social-button"></span>
+              <span class="fa fa-linkedin-square fa-2x social-button"></span>
+            <% end %> 
+            <%= link_to 'https://www.facebook.com/gillian.newton.3591' do %>
+              <span class="fa fa-facebook-square fa-2x social-button"></span>
             <% end %>
           </div>
         </div>

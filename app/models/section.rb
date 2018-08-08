@@ -3,10 +3,15 @@ class Section < ApplicationRecord
   has_many :lessons
 
   include RankedModel
-  ranks :row_order, with_same: :course_id
+  ranks :row_order_position, with_same: :course_id
 
   def next_section
-    section = course.sections.where("row_order > ?", self.row_order).rank(:row_order).first
+    section = course.sections.where("row_order_position > ?", self.row_order_position).rank(:row_order_position).first
+    return section
+  end
+
+  def previous_section
+    section = course.sections.where("row_order_position < ?", self.row_order_position).rank(:row_order_position).last
     return section
   end
 

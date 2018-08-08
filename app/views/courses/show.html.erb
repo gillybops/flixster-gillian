@@ -2,15 +2,15 @@
 
 <div class="booyah-box col-10 offset-1">
   <div class="text-center">
-    <h1><%= @course.title %>
-      <br /><br />
-      <% if @course.image.present? %>
-        <%= image_tag @course.image, class: 'img-fluid', alt:"Responsive image" %>
-      <% end %>
-    </h1>
+    <h1><%= @course.title %></h1>
+      <%= image_tag @course.image, class: 'img-fluid' %>
+  </div>
   <br />
-  <div class="row">
-    <div class="col-sm-4 col-12 text-center">
+    <div class="col-sm-6 col-6 offset-3 text-center">
+      <%= @course.description %>
+    </div>
+    <br />
+    <div class="col-sm-6 col-6 offset-3 text-center">
       <span class="badge badge-default">
         <%= number_to_currency @course.cost %>
       </span>
@@ -20,13 +20,12 @@
         <br />
         <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
       <% end %>
-
       <br />
       <br />
        
-      <% if current_user %>
-        <% if current_user.enrolled_in?(@course) %>
-          <h3 class="badge badge-info">You Are Enrolled!</h3>
+      <% if current_user && current_user != @course.user %>
+        <% if current_user && current_user.enrolled_in?(@course) %>
+          <h3 class="badge badge-success">You Are Enrolled!</h3>
         <% else %>
           <% if @course.free? %>
             <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
